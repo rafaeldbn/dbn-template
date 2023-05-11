@@ -1,0 +1,40 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Template.Infrastructure</Name>
+    <Description>
+    </Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Template.Infrastructure</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+	<Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Template.Infrastructure.csproj" File="Template.Infrastructure.csproj" ReplaceParameters="true">
+      <Folder Name="Data" TargetFolderName="Data">
+        <Folder Name="Config" TargetFolderName="Config">
+          <ProjectItem ReplaceParameters="true" TargetFileName="UsuarioConfig.cs">UsuarioConfig.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="AppDbContext.cs">AppDbContext.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="EfRepository.cs">EfRepository.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ModelBuilderExtension.cs">ModelBuilderExtension.cs</ProjectItem>
+      </Folder>
+      <Folder Name="NoSql" TargetFolderName="NoSql">
+        <ProjectItem ReplaceParameters="true" TargetFileName="MongoContext.cs">MongoContext.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MongoRepository.cs">MongoRepository.cs</ProjectItem>
+      </Folder>
+      <Folder Name="MassTransit" TargetFolderName="MassTransit">
+        <ProjectItem ReplaceParameters="true" TargetFileName="MessageService.cs">MessageService.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="DefaultInfrastructureModule.cs">DefaultInfrastructureModule.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="StartupSetup.cs">StartupSetup.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,39 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>DBN CleanArchitecture Template</Name>
+    <Description>Uma solution com as implementações do PostgreSQL, RabbitMQ com MassTransit e MongoDB</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>false</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+	<ProjectCollection>
+		<SolutionFolder Name="src">
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Core" CopyParameters="true">
+				Template.Core\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructure" CopyParameters="true">
+				Template.Infrastructure\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.SharedKernel" CopyParameters="true">
+				Template.SharedKernel\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Web" CopyParameters="true">
+				Template.Web\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+		</SolutionFolder>
+    <SolutionFolder Name="worker">
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Worker" CopyParameters="true">
+				Template.Worker\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+    </SolutionFolder>
+	</ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

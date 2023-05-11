@@ -1,0 +1,43 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Template.SharedKernel</Name>
+    <Description>
+    </Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Template.SharedKernel</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+	<Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Template.SharedKernel.csproj" File="Template.SharedKernel.csproj" ReplaceParameters="true">
+      <Folder Name="Extensions" TargetFolderName="Extensions">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DecimalExtensions.cs">DecimalExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="EnumExtensions.cs">EnumExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="JsonExtensions.cs">JsonExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="StringExtensions.cs">StringExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Interfaces" TargetFolderName="Interfaces">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IAggregateRoot.cs">IAggregateRoot.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IDocument.cs">IDocument.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IReadRepository.cs">IReadRepository.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IRepository.cs">IRepository.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Util" TargetFolderName="Util">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AmbienteUtil.cs">AmbienteUtil.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="BaseDomainEvent.cs">BaseDomainEvent.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="BaseEntity.cs">BaseEntity.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="BsonCollectionAttribute.cs">BsonCollectionAttribute.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Document.cs">Document.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PagedList.cs">PagedList.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

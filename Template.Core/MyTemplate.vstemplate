@@ -1,0 +1,57 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Template.Core</Name>
+    <Description>
+    </Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Template.Core</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+	<Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Template.Core.csproj" File="Template.Core.csproj" ReplaceParameters="true">
+      <Folder Name="DTO" TargetFolderName="DTO">
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsuarioAuditDto.cs">UsuarioAuditDto.cs</ProjectItem>  
+      </Folder>
+      <Folder Name="Entities" TargetFolderName="Entities">
+        <Folder Name="USUARIOAGGREGATE" TargetFolderName="UsuarioAggregate">
+          <Folder Name="EVENTS" TargetFolderName="Events">
+            <ProjectItem ReplaceParameters="true" TargetFileName="UsuarioAddedEvent.cs">UsuarioAddedEvent.cs</ProjectItem>  
+          </Folder>
+          <Folder Name="HANDLER" TargetFolderName="Handler">
+            <ProjectItem ReplaceParameters="true" TargetFileName="UsuarioAddedHandler.cs">UsuarioAddedHandler.cs</ProjectItem>  
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Usuario.cs">Usuario.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Enums" TargetFolderName="Enums">
+        <ProjectItem ReplaceParameters="true" TargetFileName="InternalErrorCode.cs">InternalErrorCode.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Exceptions" TargetFolderName="Exceptions">
+        <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$Exception.cs">TemplateException.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Interfaces" TargetFolderName="Interfaces">
+        <ProjectItem ReplaceParameters="true" TargetFileName="INoSqlRepository.cs">INoSqlRepository.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IUsuarioService.cs">IUsuarioService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IMessageService.cs">IMessageService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsuarioService.cs">UsuarioService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Specification" TargetFolderName="Specification">
+        <ProjectItem ReplaceParameters="true" TargetFileName="SpecificationExtensions.cs">SpecificationExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsuarioPorNomeSpec.cs">UsuarioPorNomeSpec.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsuariosPaginadosSpec.cs">UsuariosPaginadosSpec.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="DefaultCoreModule.cs">DefaultCoreModule.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

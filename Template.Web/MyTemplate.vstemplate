@@ -1,0 +1,60 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Template.Web</Name>
+    <Description>
+    </Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Template.Web</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+	<Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Template.Web.csproj" File="Template.Web.csproj" ReplaceParameters="true">
+      <Folder Name="Base" TargetFolderName="Base">
+        <ProjectItem ReplaceParameters="true" TargetFileName="PagedRequest.cs">PagedRequest.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PagedResponse.cs">PagedResponse.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Configuration" TargetFolderName="Configuration">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ConfigureSwaggerOptions.cs">ConfigureSwaggerOptions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Endpoints" TargetFolderName="Endpoints">
+        <Folder Name="PingEndpoints" TargetFolderName="PingEndpoints">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Ping.cs">Ping.cs</ProjectItem>
+        </Folder>
+        <Folder Name="UsuarioEndpoints" TargetFolderName="UsuarioEndpoints">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Create.cs">Create.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Create.CreateUsuarioRequest.cs">Create.CreateUsuarioRequest.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="List.cs">List.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="List.ListUsuarioResponse.cs">List.ListUsuarioResponse.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="EndpointsV2" TargetFolderName="EndpointsV2">
+        <Folder Name="PingEndpoints" TargetFolderName="PingEndpoints">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Ping.cs">Ping.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Middleware" TargetFolderName="Middleware">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ApiVersioningErrorProvider.cs">ApiVersioningErrorProvider.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ExceptionHandlerMiddleware.cs">ExceptionHandlerMiddleware.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Dockerfile">Dockerfile</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName=".dockerignore">.dockerignore</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="nlog.config">nlog.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="settings.env">settings.env</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="WebMarker.cs">WebMarker.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
