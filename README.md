@@ -10,6 +10,8 @@ O projeto já possui configurado:
 - NLog configurado para o MongoDB
 - Masstransit com RabbitMQ
 
+Baseado no template https://github.com/ardalis/CleanArchitecture
+
 # Getting Started
 
 1. Baixar o repositório como ZIP
